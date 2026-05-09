@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Perfil de {{ nombre }}{% endblock %}
+
+{% block content %}
+    <h2>{{ nombre }}</h2>
+    <img src="{{ url_for('static', path='/css/imagen/' + foto) }}" alt="{{ nombre }}" class="img-perfil">
+    
+    <p>{{ descripcion }}</p>
+        
+    <a href="/">
+        <button class="btn-back">Volver al Menú de Inicio</button>
+    </a>
+{% endblock %}
